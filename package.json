@@ -7,21 +7,25 @@
     "doc": "docs"
   },
   "scripts": {
-    "watch": "babel ./src/ --out-dir ./dest -w",
-    "transpile": "babel ./src/ --out-dir ./dest",
+    "watch": "babel ./src/ --out-dir ./dist -w",
+    "transpile": "babel ./src/ --out-dir ./dist",
     "lint": "eslint ./src/",
-    "build": "set NODE_ENV=production && npm run lint && npm run transpile"
+    "build": "set NODE_ENV=production && npm run lint && npm run transpile",
+    "test": "jest"
+  },
+  "enonic": {
+    "src": "dist"
   },
   "private": true,
   "author": "Trond Erling Hundal",
   "license": "ISC",
   "dependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.0.0",
     "babel-preset-env": "^1.7.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "eslint": "^5.9.0",
     "eslint-plugin-babel": "^5.3.0",
     "ncp": "^2.0.0"
@@ -29,5 +33,9 @@
   "repository": {
     "type": "git",
     "url": ""
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.6.2",
+    "jest": "^24.9.0"
   }
 }
