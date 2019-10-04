@@ -6,10 +6,3 @@ export function arrayFind(list, predicateFn) {
   }
   return void 0;
 }
-
-export function joinArrays(array1, ...rest) {
-  return [
-    ...array1,
-    ...rest
-  ];
-}
