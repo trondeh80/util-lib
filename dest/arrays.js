@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = arrayFind;
+exports.arrayFind = arrayFind;
 function arrayFind(list, predicateFn) {
   for (var i = 0; i < list.length; i++) {
     if (predicateFn(list[i])) {
